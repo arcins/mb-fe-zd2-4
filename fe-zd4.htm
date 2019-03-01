@@ -1,0 +1,31 @@
+<html>
+
+<head>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 30px;
+      text-align: center;
+    }
+    .answer {
+      font-weight: bold;
+      font-size: 2em;
+      margin: 20px;
+    }
+  </style>
+</head>
+
+<body>
+<script>
+
+  function findSumOfMultiple() {
+    let sumOfMultiple = 0;
+    for (let i=1; i<100; i++)
+        if (!(i%3 && i%5)) sumOfMultiple += i;
+    return sumOfMultiple;
+  }
+
+  document.write('<div>Suma wszystkich wielokrotności 3 lub 5 poniżej 100:<div><div class="answer">', findSumOfMultiple(),'</div>');
+</script>
+</body>
+</html>

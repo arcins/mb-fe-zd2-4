@@ -1,0 +1,33 @@
+<html>
+
+<head>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 30px;
+      text-align: center;
+    }
+    .answer {
+      font-weight: bold;
+      font-size: 2em;
+      margin: 20px;
+    }
+  </style>
+</head>
+
+<body>
+<script>
+  //fibonacci recurrence method
+  function findF(a = 1, b = 1, i = 2) {
+    var indexToFind = i;
+    if (b < 1000)
+      indexToFind = findF(b, a + b, ++i);
+    return indexToFind;
+  }
+
+  let firstindex = findF()
+
+  document.write('<div>Indeks pierwszego terminu w sekwencji Fibonacciego który zawierać będzie 5 cyfr:<div><div class="answer">', firstindex,'</div>');
+</script>
+</body>
+</html>
